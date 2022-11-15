@@ -21,6 +21,8 @@
         </style>
     </head>
     <body class="antialiased">
-         {!! $data !!}
+        Welcome to TalentPlus Internship Week1 Task
+
+        <h4>Simple microservice application</h4>
     </body>
 </html>
