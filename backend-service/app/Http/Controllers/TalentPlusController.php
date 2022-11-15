@@ -13,7 +13,6 @@ class TalentPlusController extends Controller
             'data' => 'TALENT PLUS'
         ], 200);
 
-        // return $data;
-        return view('welcome', ['data' => $data]);
+        return $data;
     }
 }
