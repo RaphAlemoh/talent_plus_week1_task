@@ -20,7 +20,7 @@
 
 - kubectl get services -w
 
-- helm delete laravel-kubernetes
+- helm delete backend-service
 
 - helm install nginx-ingress stable/nginx-ingress --set controller.publishService.enabled=true
 
