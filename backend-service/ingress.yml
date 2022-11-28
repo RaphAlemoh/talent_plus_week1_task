@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: backend-service-ingress
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+spec:
+  tls:
+    - hosts:
+        - http://localhost:8000/
+      secretName: backend-service-tls
+  rules:
+    - host: http://localhost:8000/
+      http:
+        paths:
+          - backend:
+              serviceName: backend-service-lamp
+              servicePort: 80

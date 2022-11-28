@@ -1,0 +1,19 @@
+version: '3.8'
+services:
+  php:
+    image: alemsbaja/backend-service
+    restart: always
+    ports:
+        - 8000:80
+    environment:
+        APP_KEY : "base64:kC77TpPdjDd5/+ePlARAzVTmpPSIw19o0uKRQvvCqpc="
+        APP_ENV : "local"
+        APP_DEBUG : true
+        DB_PORT : 3306
+        DB_HOST : mysql
+        DB_DATABASE : talent_plus_week1_task
+        DB_USERNAME : root
+        DB_PASSWORD : ""
+# mysql:
+#     image: mysql:5.7
+#     restart: always
